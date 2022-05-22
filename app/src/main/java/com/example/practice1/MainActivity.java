@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.framelayout, fragment1);
+        
+         //Implementation of BackStack
+        fragmentTransaction.setReorderingAllowed(true);
+        fragmentTransaction.addToBackStack("name");
+        //
+        
         fragmentTransaction.commit();
     }
 
@@ -50,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.framelayout, fragment2);
+        
+         //Implementation of BackStack
+        fragmentTransaction.setReorderingAllowed(true);
+        fragmentTransaction.addToBackStack("name");
+        //
+        
         fragmentTransaction.commit();
     }
 }
