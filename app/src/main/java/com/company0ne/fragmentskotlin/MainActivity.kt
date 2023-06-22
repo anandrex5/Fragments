@@ -9,7 +9,7 @@ import com.company0ne.fragmentskotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var dataBinding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(dataBinding.root)
 
 
-        dataBinding.fragmentButton1.setOnClickListener {
+        binding.fragmentButton1.setOnClickListener {
             replaceFragment(Fragment1())
         }
 
-        dataBinding.fragmentButton2.setOnClickListener {
+        binding.fragmentButton2.setOnClickListener {
             replaceFragment(Fragment2())
         }
     }
